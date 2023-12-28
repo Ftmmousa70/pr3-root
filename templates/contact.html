@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style type="text/css">
+       .important { color: #570630; }
+    </style>
+</head>
+<body>
+    <div>
+        {% if show_form %}
+          <h1>Complete Below Form Please:</h1>
+            <form action="/contact" method="get">
+                <label for="name">Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Write Name">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Write Email">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" placeholder="Fill..."></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        {% else %}
+            <div>
+                <h3 class="important">Thank you Mr/Mrs {{ fname }} For Filling Out This Form</h3>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

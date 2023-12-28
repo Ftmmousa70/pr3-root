@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <style>
+        tr,th,td{padding : 5px;
+            text-align: center;
+        }
+    </style>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Bio</th>
+                <th>Time of Fill</th>
+            </tr>
+        {% for contact in contacts %}
+            <tr>
+                <td>{{contact.fname}}</td>
+                <td>{{contact.email}}</td>
+                <td>{{contact.description}}</td>
+                <td>{{contact.create_at}}</td>
+                <td></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+    </html>
